@@ -1,0 +1,28 @@
+name: spotify extension ci/cd
+on:
+  push:
+jobs:
+  installation:
+    runs-on: ubuntu-20.04
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: Install dependencies
+      uses: ./.github/actions/install-deps
+    - name: Installing packages...🏃‍♂️ 🏃‍♂️ 🏃‍♂️
+      run: pnpm install --frozen-lockfile
+  linter:
+    runs-on: ubuntu-20.04
+    needs: [installation]
+    concurrency: validation-${{ github.ref }}
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: Install dependencies
+      uses: ./.github/actions/install-deps
+    - name: Installing packages...🏃‍♂️ 🏃‍♂️ 🏃‍♂️
+      run: pnpm install --frozen-lockfile
+    - name: Running typecheck... 🩺 🔬 🔭
+      run: pnpm typecheck
+    - name: Running linter... 👀
+      run: pnpm lint
