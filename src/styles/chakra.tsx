@@ -14,10 +14,9 @@ const headingTheme = defineStyleConfig({
       background: 'navy',
       color: 'white',
     }),
-    target: defineStyle({
-
-    }),
-  }, sizes: {
+    target: defineStyle({}),
+  },
+  sizes: {
     xl: {
       fontSize: '40px',
       fontWeight: '700',
@@ -25,8 +24,8 @@ const headingTheme = defineStyleConfig({
     '4xl': {
       fontSize: '96px',
       fontWeight: '700',
-    }
-  }
+    },
+  },
 });
 
 export const theme = extendTheme({
