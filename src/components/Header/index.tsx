@@ -1,15 +1,21 @@
-import { Flex, Heading, HStack } from '@chakra-ui/react';
+import { Flex, Heading, HStack, Link, Box, } from '@chakra-ui/react';
+import NextLink from 'next/link';
 
 export const Header = () => {
   return (
-    <Flex justify="space-between">
-      <Heading>VietTech</Heading>
-      <HStack spacing={4}>
-        <p>ABOUT</p>
-        <p>OUR WORK</p>
-        <p>COMMUNITY POSTS</p>
+    <Flex justify="space-between" w="100%">
+      <Heading>
+        <span style={{ fontWeight: 400 }}>Viet</span>
+        <span>Tech</span>
+      </Heading>
+      <HStack spacing={16}>
+        <Link href="/#about">ABOUT</Link>
+        <Link href="/#our-work">OUR WORK</Link>
+        <Link href="/posts">COMMUNITY POSTS</Link>
       </HStack>
-      <p>Connect With Us</p>
+      <Box textAlign="center" alignSelf="center" background="#000000" py={4}>
+        <Link as={NextLink} href="/" px={6} variant="withBackground">Connect With Us &rarr;</Link>
+      </Box>
     </Flex>
   );
 };
