@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { Inter } from '@next/font/google';
 import { VStack } from '@chakra-ui/react';
 import Signature from '../components/Main/Signature';
+import About from '../components/Main/About';
 
 import styles from '../styles/Home.module.css';
 
@@ -20,9 +21,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <VStack py={12} px={24} w="100%" spacing={24} background="beige">
+        <VStack py={12} px={24} w="100%" spacing={36} background="beige">
           <Header />
           <Signature />
+          <About />
         </VStack>
       </main>
     </>
