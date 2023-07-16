@@ -1,20 +1,15 @@
-import { Button, Stack } from '@chakra-ui/react';
+import { Flex, Heading, HStack } from '@chakra-ui/react';
 
 export const Header = () => {
   return (
-    <Stack spacing={4} direction="row" align="center">
-      <Button colorScheme="teal" size="xs">
-        Button
-      </Button>
-      <Button colorScheme="teal" size="sm">
-        Button
-      </Button>
-      <Button colorScheme="teal" size="md">
-        Button
-      </Button>
-      <Button colorScheme="teal" size="lg">
-        Button
-      </Button>
-    </Stack>
+    <Flex justify="space-between">
+      <Heading>VietTech</Heading>
+      <HStack spacing={4}>
+        <p>ABOUT</p>
+        <p>OUR WORK</p>
+        <p>COMMUNITY POSTS</p>
+      </HStack>
+      <p>Connect With Us</p>
+    </Flex>
   );
 };
