@@ -3,9 +3,9 @@ import { extendTheme, defineStyle, defineStyleConfig } from '@chakra-ui/react';
 const linkTheme = defineStyleConfig({
   variants: {
     withBackground: defineStyle({
-      color: '#FFFFFF'
+      color: '#FFFFFF',
     }),
-  }
+  },
 });
 
 export const theme = extendTheme({
@@ -19,5 +19,5 @@ export const theme = extendTheme({
   },
   components: {
     Link: linkTheme,
-  }
+  },
 });

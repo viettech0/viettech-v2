@@ -3,7 +3,6 @@ import Image from 'next/image';
 import { Inter } from '@next/font/google';
 import { VStack } from '@chakra-ui/react';
 
-
 import styles from '../styles/Home.module.css';
 
 import { Header } from '../components/Header';
