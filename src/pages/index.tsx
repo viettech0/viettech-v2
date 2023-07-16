@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { Inter } from '@next/font/google';
 import { VStack } from '@chakra-ui/react';
+import Signature from '../components/Main/Signature';
 
 import styles from '../styles/Home.module.css';
 
@@ -19,9 +20,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <VStack py={12} px={12} w="100%">
+        <VStack py={12} px={24} w="100%" spacing={24} background="beige">
           <Header />
-          <p style={{ fontFamily: `'Space Grotesk', sans-serif`, fontSize: '48px' }}>FIND</p>
+          <Signature />
         </VStack>
       </main>
     </>
