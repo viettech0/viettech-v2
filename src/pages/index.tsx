@@ -4,6 +4,7 @@ import { Inter } from '@next/font/google';
 import { VStack } from '@chakra-ui/react';
 import Signature from '../components/Main/Signature';
 import About from '../components/Main/About';
+import Links from '../components/Main/Links';
 
 import styles from '../styles/Home.module.css';
 
@@ -25,6 +26,7 @@ export default function Home() {
           <Header />
           <Signature />
           <About />
+          <Links />
         </VStack>
       </main>
     </>
